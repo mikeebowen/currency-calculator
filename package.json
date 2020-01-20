@@ -1,8 +1,8 @@
 {
-  "name": "currency-converter",
+  "name": "currency-calculator",
   "version": "0.0.1",
   "description": "A library for making currency conversions",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "scripts": {
     "start": "node dist/index.js",
     "compile": "ts-node build.ts && tsc",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mikeebowen/currency-converter.git"
+    "url": "git+https://github.com/mikeebowen/currency-calculator.git"
   },
   "keywords": [
     "currency",
@@ -25,12 +25,15 @@
   "author": "Michael Bowen",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mikeebowen/currency-converter/issues"
+    "url": "https://github.com/mikeebowen/currency-calculator/issues"
   },
-  "homepage": "https://github.com/mikeebowen/currency-converter#readme",
+  "homepage": "https://github.com/mikeebowen/currency-calculator#readme",
   "devDependencies": {
     "@types/shelljs": "^0.8.6",
+    "@typescript-eslint/parser": "^2.16.0",
     "eslint": "^6.8.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
     "nodemon": "^2.0.2",
     "pino-pretty": "^3.5.0",
     "shelljs": "^0.8.3",

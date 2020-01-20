@@ -1,0 +1,40 @@
+{
+  "name": "currency-converter",
+  "version": "0.0.1",
+  "description": "A library for making currency conversions",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "node dist/index.js",
+    "compile": "ts-node build.ts && tsc",
+    "dev": "nodemon src/index.ts | pino-pretty",
+    "dev:debug": "nodemon --exec 'node -r ts-node/register --inspect-brk' src/index.ts | pino-pretty",
+    "lint": "tsc --noEmit && eslint -c .eslintrc.js '{src, test}/*.{js,ts,tsx}' --quiet",
+    "lint:fix": "tsc --noEmit && eslint -c .eslintrc.js '{src, test}/*.{js,ts,tsx}' --quiet --fix",
+    "test": "mocha test/**/*.ts --exit",
+    "test:debug": "mocha --inspect-brk test/**/*.ts --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikeebowen/currency-converter.git"
+  },
+  "keywords": [
+    "currency",
+    "conversion",
+    "calculator"
+  ],
+  "author": "Michael Bowen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mikeebowen/currency-converter/issues"
+  },
+  "homepage": "https://github.com/mikeebowen/currency-converter#readme",
+  "devDependencies": {
+    "@types/shelljs": "^0.8.6",
+    "eslint": "^6.8.0",
+    "nodemon": "^2.0.2",
+    "pino-pretty": "^3.5.0",
+    "shelljs": "^0.8.3",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.7.5"
+  }
+}

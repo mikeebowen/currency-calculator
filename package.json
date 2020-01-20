@@ -3,10 +3,11 @@
   "version": "0.0.1",
   "description": "A library for making currency conversions",
   "main": "dist/index.js",
+  "bin": "./dist/index.js",
   "scripts": {
     "start": "node dist/index.js",
     "compile": "ts-node build.ts && tsc",
-    "dev": "nodemon src/index.ts | pino-pretty",
+    "dev": "node src/index.ts | pino-pretty",
     "dev:debug": "nodemon --exec 'node -r ts-node/register --inspect-brk' src/index.ts | pino-pretty",
     "lint": "tsc --noEmit && eslint -c .eslintrc.js '{src, test}/*.{js,ts,tsx}' --quiet",
     "lint:fix": "tsc --noEmit && eslint -c .eslintrc.js '{src, test}/*.{js,ts,tsx}' --quiet --fix",
@@ -29,6 +30,7 @@
   },
   "homepage": "https://github.com/mikeebowen/currency-calculator#readme",
   "devDependencies": {
+    "@types/lodash": "^4.14.149",
     "@types/shelljs": "^0.8.6",
     "@typescript-eslint/parser": "^2.16.0",
     "eslint": "^6.8.0",
@@ -39,5 +41,11 @@
     "shelljs": "^0.8.3",
     "ts-node": "^8.6.2",
     "typescript": "^3.7.5"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "query-string": "^6.10.1"
   }
 }
